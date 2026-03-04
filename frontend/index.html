@@ -1,0 +1,1528 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Profil Hippocratique</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Déterminer mon profil hippocratique</h1>
+        <div class="divider"></div>
+      </header>
+
+      <section id="intro" class="card">
+        <p class="subtitle">Un peu d'histoire...</p>
+        <p>
+          Il y a plus de 2 000 ans, Hippocrate, père de la médecine moderne,
+          posait les bases d'une psychologie avant l'heure. Selon lui, notre
+          équilibre physique et émotionnel dépend de l'influence de quatre
+          éléments naturels et des fluides qui parcourent notre corps.
+        </p>
+      </section>
+
+      <section id="why" class="card">
+        <p class="subtitle">Pourquoi faire ce test ?</p>
+        <p>Une boussole pour :</p>
+        <ul class="benefits">
+          <li><span>🌿</span> Mieux vous connaître</li>
+          <li><span>✨</span> Optimiser votre énergie</li>
+          <li><span>🤝</span> Améliorer vos relations</li>
+        </ul>
+      </section>
+
+      <section id="instructions" class="card">
+        <p class="subtitle">Pour un résultat précis :</p>
+        <ul class="check-list">
+          <li>Répondez à toutes les questions.</li>
+          <li>
+            Cochez si la majorité est vraie (ex : "Je suis patient, doux,
+            tolérant" → si vous êtes patient et doux mais n'aimez pas écouter,
+            cochez quand même).
+          </li>
+          <li>Répondez sans trop réfléchir, selon votre nature quotidienne.</li>
+        </ul>
+      </section>
+
+      <section>
+        <form id="form" action="" method="post">
+          <p class="questions">
+            Silhouette : Comment est ma morphologie générale ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Ma silhouette est imposante, charpentée, souvent enrobée voire
+                  en surpoids.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Ma silhouette est toujours en rondeur et affiche souvent des
+                  kilos superflus.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon ossature est fine et ma silhouette reste assez longiligne,
+                  même lorsque j'ai quelques kilos en trop.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Ma morphologie est équilibrée et ma taille plutôt élancée.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>Ma musculature est tonique, fuselée et bien dessinée.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Mes os sont épais et ma musculature massive et dense.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>Mes muscles sont longs, fins et peu développés.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Ma démarche est alerte, gaie et mon pas bien marqué.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Mes membres sont épais, peu toniques et entourés de tissus
+                  graisseux.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>Ma démarche est fière, décidée et énergique.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Ma démarche est régulière et posée.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>Ma démarche est légère, souple et mon pas rapide.</p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 2 -->
+          <p class="questions">Visage : quelle est sa forme ?</p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>Mon visage est de forme rectangulaire et équilibré.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Mon visage est de forme ronde avec les pommettes hautes.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon visage est en forme de poire avec le front moins dominant
+                  que la mâchoire.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon visage est de forme triangulaire en s'affinant vers le
+                  menton.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Les trois parties de mon visage (front, pommettes, mâchoire)
+                  sont bien proportionnées.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Ma mâchoire et mon menton sont assez développés.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Mon visage se colore facilement</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>Mon front est haut et dominant dans mon visage</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>J'ai un coup épais, voir un double-menton.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon teint est plutôt pâle avec parfois des problèmes de peau.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>Mon teint est blanc, parfois grisâtre.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>Mon teint est mat avec une teinte légèrement jaune.</p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 3 -->
+          <p class="questions">Mains : comment sont-elles ?</p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mes mains sont musclées, équilibrées et mes doigts légèremenet
+                  plus longs que ma paume.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Mes mains et mes doigts sont ronds, souples et parfois
+                  boudinés.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Mes mains sont trapues, puissantes et ma paume est large et
+                  bien carrée.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mes mains sont fines, mes doigts longs et mes articulations
+                  sont visibles.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>Ma paume est étroite et parcourure de nombreuses stries.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Ma peau est colorée et les lignes de ma main sont peu
+                  marquées.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>Les lignes de mes mains sont bien tracées et profondes.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Ma peau est lisse et molle et les lignes de ma main peu
+                  marquées.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>Ma poignée de main est sèche, chaude et tonique.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Ma poignée de main est chaude, humide et chaleureuse.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>Ma poignée de main est froide, humide et molle.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>Ma poignée de main est sèche, froide et rapide.</p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 4 -->
+          <p class="questions">
+            Énergie et sommeil : quel est mon taux de vitalité et mon type de
+            sommeil ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai peu d'énergie et je me fatigue vite, même avec peu
+                  d'activité, mais je peux aussi faire preuve d'une grande
+                  résistance.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon capital énergie est si important qu'il est vital pour moi
+                  de bouger et de me dépenser.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je déborde de vitalité, j'ai beaucoup d'énergie et j'aime
+                  entrainer les autres dans mon élan.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon énergie est fluctuante et mon agitation me rend fatiguable
+                  jusqu'à l'épuisement.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>J'ai une grande capacité de travail, surtout le soir.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je peux faire beaucoup de choses dans une journée, sans
+                  ressentir de fatigue.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Je n'aime pas beaucoup bouger, j'ai tendance à la passivitié
+                  et besoin d'être stimulé.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai tendance à trop en faire, à ignorer mes besoins de repos,
+                  ce qui m'amène au surmenage.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Une courte nuit de sommeil me suffit, mes rêves sont joyeux et
+                  colorés.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon sommeil est de courte durée mais profond et réparateur,
+                  mes rêves sont violents.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon sommeil est agité avec des réveils difficiles le matin,
+                  dus au fait de reporter le moment du coucher, mes rêves sont
+                  angoissants.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai un besoin vital de repos et de longues nuits de sommeil.
+                  Mes rêves sont aquatiques, naïfs et plein d'imaginaire.
+                </p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 5 -->
+          <p class="questions">
+            Comportement: quelle est ma façon d'être avec moi-même et avec les
+            autres ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis très dynamique, je suis ambitieux et travailler m'est
+                  indispensable.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon cerveau travaille sans cesse : je pense, rumine, cogite,
+                  j'organise, analyse, imagine...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis joyeux, de nature heureuse et je sème la bonne humeur
+                  là où je passe.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis de nature calme, routinière, ordonnée, avec un rythme
+                  naturel plutôt lent.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je n'aime ni la monotonie ni la sédentarité, j'ai besoin en
+                  permanence d'un milieu stimulant.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis chaleureux et crée facilement des contacts, qui reste
+                  souvent superficiels.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai tendance à être directif, à juger durement et je n'aime
+                  pas déléguer.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  L'affectif guide mes actes, j'ai tendance à agir avec
+                  impulsivité et suis parfois colérique.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis capable de dire stop si ma quiétude est menacée, je
+                  sais prendre des vacances et me reposer.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Les critiques et débordements émotionnels ne m'atteignent pas
+                  profondément.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis très sensible aux personnes, à mon environnement et
+                  suis doté d'intuition.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'éprouve souvent de la colère, mais je ne l'exprime pas
+                  ouvertement.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis très exigeant, je m'astreins facilement aux règles
+                  strictes et vais souvent au-delà de mes forces.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  J'appréhende la vie avec légèreté et oublie vite les choses.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis anxieux et prend tout à coeur, comme si j'étais
+                  responsable.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai besoin d'être encadré, dynamisé car j'ai tendance à céder
+                  à la paresse et au découragement.
+                </p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 6 -->
+          <p class="questions">Qualités : quels sont mes points forts ?</p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis entreprenant, on apprécie mes qualités de rigueur et
+                  de discipline.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Je suis jovial, communicatif, sympathique et chaleureux.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis rapide d'esprit, j'ai une grande aptitude au
+                  changement et entraîne les autres.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>Je suis patient, doux et tolérant, je sais écouter.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  On apprécie mes qualités d'ordre, de méthode, d'endurance et
+                  de fidélité.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis créatif, intuitif et doté d'une grande capacité
+                  d'analyse.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Je suis sûr de moi, optimiste et j'aime parler en public.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Je suis sentimental, affectueux et expressif.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai une grande vitalité qui me permet de réaliser beaucoup de
+                  choses dans la journée.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis intuitif, contemplatif avec un univers imaginaire
+                  riche.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis courageux, travailleur, constant et j'ai une bonne
+                  maîtrise de moi-même.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis précis, méticuleux, perfectionniste et on me demande
+                  souvent conseil.
+                </p>
+              </label>
+            </li>
+          </ul>
+
+          <br />
+          <!-- Question 7 -->
+          <p class="questions">
+            Défauts : quels sont mes petits travers à améliorer ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis autoritaire, dur, voire tyrannique, trop exigeant avec
+                  moi-même et avec les autres.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je parle trop vite et mes paroles peuvent être blessantes, il
+                  m'arrive de baratiner et je peux être parfois "grande gueule".
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>Je suis indolent, paresseux, lent et apathique.</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis souvent à fleur de peau et débordé par des choses
+                  simples à faire.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis anxieux et mon instabilité émotionnelle me pousse à
+                  différer mes projets.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je m'éparpille dans des actions précipitées et trop
+                  nombreuses, je suis irascible.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je manque de self control, suis impulsif, colérique et "tête
+                  brûlée".
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Parfois je me laisse aller à la facilité et me remplis de
+                  nourriture de mauvaise qualité, à réconfort immédiat (grasse
+                  et sucrée).
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je dépense trop d'énergie et malmène mon corps dont je
+                  n'écoute pas les besoins.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je manque de discipline avec une tendance au laxisme, à
+                  l'agitation et à la dispersion.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Je me décourage facilement et je baisse les bras, renonçant à
+                  tout effort et fuyant l'action.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je me laisse influencer par mes relations et suis perméable
+                  aux émotions des autres.
+                </p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 8 -->
+          <p class="questions">
+            Alimentation : quel est mon rapport à la nourriture ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon métabolisme et ma digestion sont lents, j'ai tendance à
+                  stocker et à grossir facilement.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Bon vivant, ma capacité digestive est puissante, je digère
+                  tout.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis un bon mangeur avec un métabolisme rapide, j'ai besoin
+                  d'une nourriture substantielle pour compenser mes besoins
+                  musculaires.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Ma capacité digestive est faible mais mon métabolisme rapide,
+                  je brûle vite ce que je consomme.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  J'aime les aliments riche, les grosse quantités et les repas
+                  bien arrosés.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai du mal à modérer mes excès alimentaires car j'aime plus
+                  que tout les plaisirs de la vie.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Rarement en surpoids, je préfère manger de petites quantités
+                  et faire plusieurs petits repas.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Lorsque je suis hyperactif et surmené, je compense avec des
+                  aliments gras et sucrés.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'aime les plaisirs de la table, mais suis incapable de
+                  m'astreindre à une discipline alimentaire.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Pour moi la quantité compte plus que la qualité et les
+                  aliments jouent un rôle consolateur.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis sujet au troubles digestifs et calme volontiers ma
+                  nervosité avec des aliments sucrés.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Bien que je supporte bien le régime et le jeûne,
+                  l'alimentation reste une préoccupation essentielle dans mon
+                  quotidien particulièrement lorsque mon moral est en baisse.
+                </p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 9 -->
+          <p class="questions">
+            Activité physique : quel est mon potentiel sportif ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Le sport ? Pas pour moi ! Cela me demande d'immenses efforts.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Bien que mon corps soit en perpétuel mouvement, je ne suis pas
+                  naturellement porté vers le sport. Je me fatigue vite en
+                  séance et ne suis pas très assidu.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'aime le sport car il me permet d'entretenir mon capital
+                  musculaire et de libérer mes tensions.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai une musculature puissante malgré un surpoids fréquent et
+                  mon coeur est très résistant, je suis capable d'une bonne
+                  endurance et le cardio-training est parfait pour moi.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Une fois lancé j'ai du plaisir à faire du sport, mais ma
+                  nature d'épicurien m'entraîne vers la sédentarité, poussé par
+                  la paresse.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je peux pratiquer tous les sports, même les plus extrêmes,
+                  mais j'ai tendance à m'imposer un rythme et des objectifs trop
+                  lourds.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Pour maintenir mon assiduité et ma motivation pour le sport,
+                  j'ai besoin de la stimulation des autres et d'être
+                  régulièrement encouragé.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Le sport m'aide à évacuer mon trop-plein d'anxiété et de
+                  stress, pourvu que la dépense reste modérée avec des séances
+                  courtes et variées.
+                </p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 10 -->
+          <p class="questions">
+            Gestion du stress : que ce passe t'il lorsque je suis stressé ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai des spasmes, des maux de têtes, des tremblements, des
+                  crampes, des palpitations...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je m'éparpille, je suis déconcentré, je fais de grands gestes
+                  et je me met en colère.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Je me replie sur moi-même, j'ai l'impression que je n'y
+                  arriverai jamais et je deviens mélancolique.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Je ne laisse rien transparaître mais je me dévalorise et me
+                  console avec de la nourriture.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je ronge ma colère, je subis de fortes tensions intérieures et
+                  me fais du soucis pour tout.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je maîtrise mal mon débit de parole et la justesse de mes
+                  mots.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai tendance à projeter ma tension sur les autres, à chercher
+                  un responsable, à m'énerver.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>Je deviens instable émotionnellement, agité et angoissé.</p>
+              </label>
+            </li>
+          </ul>
+          <!-- Question 11 -->
+          <p class="questions">
+            Émotions et pensées négatives : que ce passe-t-il lorsque je suis
+            négatif ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je subis le contrecoup de mon hyperactivité et devient
+                  irritable et soucieux, j'interprète les paroles et les actions
+                  des autres, sans m'assurer que ces interprétations sont
+                  fondées.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Je me met à douter de tout et surtout de moi-même, je prend
+                  tout à coeur de façon personnelle.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Je me sent dévalorisé, je perds confiance en moi et je me sent
+                  coupable de ne plus faire d'effort, je deviens laxiste et me
+                  laisse aller aux dépens de mon équilibre et de ma santé.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Je suis emporté par une pensée anarchique avec parfois des
+                  paroles mal maîtrisées.
+                </p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 12 -->
+          <p class="questions">
+            Santé : quelle est ma force vitale et quels sont mes points faibles
+            ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai une grande force vitale, une solide santé lorsque je
+                  modère mes excès et une puissante capacité de récupération en
+                  cas de maladie.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon sang est épais, circule mal et je suis souvent en
+                  surpoids.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Malgré ma grande mobilité, ma force vitale est moyenne, je me
+                  fatigue vite et suis frileux.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai une excellente constitution et une énergie dont j'use et
+                  abuse.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai une petite vitalité très dépendante du climat et de
+                  l'humidité.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  J'ai du mal à éliminer mes toxines et me déminéralise vite,
+                  (stress, cheveux blanc, alopécie, problèmes osseux, douleurs
+                  inflammatoires...).
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon point faible est le système nerveux, je suis sujet aux
+                  insomnies, à la déprime et a l'anxiété...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Le surmenage me guette et me prédispose aux migraines, aux
+                  rhumatismes, à l'hyperthyroïdie, aux burn-out...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon point faible est le système lymphatique, je retiens l'eau
+                  facilement et mes tissus sont infiltrés, je souffre d'oedèmes
+                  et d'une mauvaise circulation.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Ma faiblesse glandulaire me prédispose à l'hypothyroïdie,
+                  l'atonie sexuelle, l'apathie, les ulcères et mes toxines sont
+                  souvent éliminées sous forme d'écoulements par voie ORL.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon point faible est lié à mes excès de table, surpoids,
+                  problèmes cardiovasculaires, diabète...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Mon point faible est le foie avec ses symptômes de faiblesse,
+                  allergies, cholestérol, constipation, nausées, calculs
+                  biliaires...
+                </p>
+              </label>
+            </li>
+          </ul>
+          <br />
+          <!-- Question 13 -->
+          <p class="questions">
+            Pathologies : quels sont mes symptômes et prédispositions
+            pathologiques ?
+          </p>
+
+          <ul class="quiz-list">
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Surpoids (par excès alimentaire + sédentarité), obésité,
+                  celullite, oedèmes lymphatique et sanguin.
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>Hyperviscosité du sang, varices, hémorroïdes...</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Spasmophilie, maux de têtes, insomnies, perte de mémoire...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>Anxiété, déprime, dépression, angoisse, stress...</p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Constipation, nausées, hémorroïdes, calculs biliaires,
+                  allergies...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Surpoids (par excès alimentaire quotidien), cholestérol,
+                  diabète, hyperglycémie...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Surpoids (par compulsion compensatoire), cholestérol,
+                  migraines hépatiques, indigestions...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="bilieux" />
+                <div class="custom-check"></div>
+                <p>
+                  Hyperthyroïdie, hypertension, burn-out, surmenage,
+                  rhumatisme...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Digestions lentes et difficiles, hypothyroïdie, déprime,
+                  impuissance, frigidité, ulcères...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="sanguin" />
+                <div class="custom-check"></div>
+                <p>
+                  Hypertension artérielle, infarctus, athérosclérose,
+                  artériosclérose...
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="lymphatique" />
+                <div class="custom-check"></div>
+                <p>
+                  Écoulement des muqueuses (sinusite,
+                  rhinopharyngite,vaginite,cystite...).
+                </p>
+              </label>
+            </li>
+            <li>
+              <label class="quiz-answer">
+                <input type="checkbox" name="profil" value="nerveux" />
+                <div class="custom-check"></div>
+                <p>
+                  Rhumatismes, tendinites, douleurs inflammatoires, eczéma sec,
+                  psoriasis...
+                </p>
+              </label>
+            </li>
+          </ul>
+          <button type="submit" class="btn-submit">Valider mes réponses</button>
+        </form>
+      </section>
+      <div id="quizError"></div>
+      <section id="quizResult"></section>
+    </main>
+  </body>
+</html>
