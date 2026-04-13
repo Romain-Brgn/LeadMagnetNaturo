@@ -7,6 +7,8 @@ The report is generated using OpenAI and sent by email as a PDF.
 Author: Romain Bourgin
 """
 
+import uuid
+
 from fastapi import FastAPI, HTTPException, Request
 from app.schemas import QuizSubmitPayload, ReportRequestPayload, AiReport
 from app.scoring import compute_temperaments
@@ -20,6 +22,7 @@ from app.pdf_utils import generate_pdf_report
 import os
 import resend
 import base64
+import uuid
 from openai import OpenAI
 
 from slowapi import Limiter, _rate_limit_exceeded_handler
@@ -69,6 +72,7 @@ async def quiz_submit(payload: QuizSubmitPayload, request: Request):
 @app.post("/report/send")
 @limiter.limit("1/minute")
 async def report_send(payload: ReportRequestPayload, request: Request):
+    print("--- DEBUT REPORT_SEND ---")
     # Validations de base
     if not payload.consent:
         raise HTTPException(
@@ -79,7 +83,7 @@ async def report_send(payload: ReportRequestPayload, request: Request):
     # Vérification du Rate Limit DB
     # On limite à 3 par heure par email 
     count = count_report_requests_last_minutes(payload.email, minutes=60)
-    if count >= 3: 
+    if count >= 30: 
         raise HTTPException(
             status_code=429,
             detail={"message": "Limite de rapports atteinte pour cette heure.", "code": "RATE_LIMIT"},
@@ -93,7 +97,7 @@ async def report_send(payload: ReportRequestPayload, request: Request):
         )
 
     report = None  
-
+    print(f"Appel OpenAI avec la clé : {os.getenv('OPENAI_API_KEY')[:10]}...")
     try:
        
             report_request_id = create_report_request(payload.submission_id, payload.email, payload.consent)
@@ -102,27 +106,28 @@ async def report_send(payload: ReportRequestPayload, request: Request):
                     status_code=500,
                     detail={"message": "Erreur lors de la création de la demande de rapport.", "code": "REPORT_REQUEST_FAILED"},
                 )
+            print("En attente de l'IA...")
             
-            count = count_report_requests_last_minutes(payload.email, minutes=60)
-            if count >= 30:
-                raise HTTPException(
-                status_code=429,
-                detail={"message": "Trop de demandes. Réessayez plus tard.", "code": "RATE_LIMIT"},
-                )
 
-            client = OpenAI()
-            response = client.responses.parse(
+            client = OpenAI(timeout=180.0)
+            response = client.beta.chat.completions.parse(
                 model="gpt-4o-mini",
-                input=[
+                messages=[
                     {
                         "role": "system",
                         "content": (
                             "Tu es expert en naturopathie sur les 4 profils hippocratiques "
+
                             "(sanguin, bilieux, lymphatique, nerveux). "
+
                             "Tu dois répondre UNIQUEMENT avec un JSON valide conforme au modèle AiReport. "
+
                             "Aucun texte en dehors du JSON. "
+
                             "3 phrases minimum et 6 phrases maximum par champ. "
+
                             "Aucun diagnostic / avis médical / traitement / posologie. "
+
                             "Ton : humain, professionnel, bienveillant, encourageant."
                         ),
                     },
@@ -138,10 +143,10 @@ async def report_send(payload: ReportRequestPayload, request: Request):
                         ),
                     },
                 ],
-                text_format=AiReport,
+                response_format=AiReport,
             )
 
-            report = response.output_parsed
+            report = response.choices[0].message.parsed
 
     except Exception as e:
         
@@ -156,10 +161,10 @@ async def report_send(payload: ReportRequestPayload, request: Request):
     
     # On génère un nom de fichier impossible à deviner : rapport_abc123.pdf
     unique_filename = f"rapport_{uuid.uuid4().hex[:10]}.pdf"
-    
+    print("IA OK, génération PDF...")
     # Adaptation de ta fonction pdf (vérifie si tu peux lui passer le nom)
     pdf_path = generate_pdf_report(submission, payload.email, out_dir, report)
-
+    print(f"PDF généré ici : {pdf_path}")
     # 5. Envoi Email
     resend.api_key = os.getenv("RESEND_API_KEY")
     resend.Emails.send({
