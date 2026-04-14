@@ -1,11 +1,15 @@
 const form = document.getElementById("form");
 const quizError = document.getElementById("quizError");
 const quizResult = document.getElementById("quizResult");
+const loader = document.getElementById("loader");
+const loaderText = document.getElementById("loaderText");
+
 let checkBoxElement = document.getElementsByName("profil");
 let lastSubmissionId = null;
 
 async function onSubmit(event) {
   event.preventDefault();
+
   quizError.textContent = "";
   quizResult.textContent = "";
   quizError.style.display = "none";
@@ -121,7 +125,7 @@ Voici les précisions sur vos différents profils : </p>
           required 
           class="email-input"
         >
-        <button type="submit" id="sendReportBtn" class="email-submit-btn">
+        <button type="submit" id="finalSendBtn" class="email-submit-btn">
           <span>Envoyer le rapport</span>
         </button><br>
         <input type="checkbox" id="isConsent" name="isConsent"/>
@@ -149,6 +153,7 @@ Voici les précisions sur vos différents profils : </p>
     emailForm.addEventListener("submit", async (e) => {
       e.preventDefault();
 
+      const finalSendBtn = document.getElementById("finalSendBtn");
       const email = document.getElementById("userEmail").value;
       const msg = document.getElementById("emailMessage");
       const isConsent = document.getElementById("isConsent").checked;
@@ -172,6 +177,10 @@ Voici les précisions sur vos différents profils : </p>
         email: email,
         consent: isConsent,
       };
+
+      loader.style.display = "flex";
+      loaderText.innerText = "L'IA génère votre rapport PDF personnalisé...";
+      finalSendBtn.disabled = true;
       try {
         // Appel API
         const response = await fetch("/report/send", {
@@ -196,6 +205,9 @@ Voici les précisions sur vos différents profils : </p>
         msg.style.display = "block";
         msg.style.color = "#c0392b";
         msg.textContent = "Oups ! Impossible d'envoyer le rapport. Réessaie.";
+      } finally {
+        loader.style.display = "none";
+        submitBtn.disabled = false;
       }
     });
   }
